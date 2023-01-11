@@ -67,6 +67,7 @@
 #11 5 symbol kamtygan brandderdi consolgo chygarynyz
 #11 Показать бренды, содержащие только 5 символов
 
+/* 11*/ select brand from cars where brand like '_____':
 
 
 #12 Display all amounts where car’s brand is Mercedes-Benz
@@ -91,6 +92,7 @@
 #15 En kymbat 10 mahsinany chygarynyz
 #15 Показать 10 самых дорогих автомобилей
 
+/* 15 */select * from cars order by price desc limit 10;
 
 
 #16 Display the newest cars between 5th to 15th
@@ -109,4 +111,5 @@
 #18 en kop mashinasy bar tustordu korsotunuzdor i kancha mashinesi bar ekendigin dagy korsotunuzdor
 # 18 Вывести автомобилей одного цвета и наибольшего количества
 
+/* 18 */select color, count(*) from cars group by color order by count(*) desc limit 1;
 
